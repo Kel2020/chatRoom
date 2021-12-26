@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <title>Developers-Chat-Room</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  </head>
+  <!-- To makesure the JavaScript function on the main.js file is executed
+  on while the page load, we include an event called 'onload' to call the
+  function 'fetchIssues'-->
+  <body onload="fetchIssues();">
+    <div class="container">
+      <h1 class="">Welcome to Developers Chat Room</h1>
+      <p class="text-dark">The purpose of the chat room is to help us communicate
+        our challenges and also meet with professional who can be of help to us, submit
+        your questions and kindly wait to get response.</p>
+        <p> <span class="text-danger">NOTE:</span> if you are responding to anyone's question kindly #tag their names at the end of your write up.</p>
+      <div class="jumbotron">
+            <h3 class="text-danger">Questions/Contribution</h3>
+            <form id="issuesInputForm">
+                <div class="form-group">
+                    <label for="issueDescInput">Name</label>
+                    <input type="text" class="form-control" id="issueDescInput" placeholder="Enter a name we can use to refer to you">
+                </div>
+
+                <div class="form-group">
+                    <label for="issueSeverityInput">Programming-Level</label>
+                    <select id="issueSeverityInput" class="form-control">
+                      <option value="severity was not selected"> choose your level </option>
+                      <option value="beginner">Beginner</option>
+                      <option value="intermediate">intermediate</option>
+                      <option value="Professional">Professional</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="issueAssignedToInput">Question(s)/Contribution(s)</label>
+                    <textarea type="text" class="form-control" id="issueAssignedToInput" placeholder="Enter Responsible" rows="8" cols="80"></textarea>
+                </div>
+                <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+            </form>
+      </div>
+      <div class="col-lg-12">
+        <div id="issuesList">
+        </div>
+      </div>
+      <div class="footer text-center">
+        <p>&copy KelvinTechWorld</p>
+      </div>
+    </div>
+
+    <!--Chance Js min File -->
+    <script type="text/javascript" src="https://chancejs.com/chance.min.js"></script>
+
+    <!-- Jquery CDN  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    <script type="text/javascript" src="main.js">
+    </script>
+  </body>
+
+</html>
